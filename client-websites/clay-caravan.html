@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="The Clay Caravan brings relaxed ceramics workshops to your home, patio, workplace, restaurant, civic center, or event space.">
+  <title>The Clay Caravan | Ceramics At Your Place</title>
+  <link rel="preconnect" href="https://images.squarespace-cdn.com">
+  <style>
+    :root{--clay:#b87755;--clay-dark:#6e3f2d;--sage:#8b8f7d;--sage-deep:#5f634f;--cream:#f7f0e5;--sand:#ead9c2;--ink:#2d2924;--muted:#6e675e;--white:#fffaf2;--line:rgba(45,41,36,.16);--shadow:0 26px 80px rgba(70,45,32,.18);--radius:28px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:manipulation}
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}button,a,input,textarea,select{touch-action:manipulation}.skip-link{position:absolute;left:-999px;top:12px;background:var(--ink);color:var(--white);padding:12px 16px;border-radius:999px;z-index:100}.skip-link:focus{left:12px}
+    .grain{position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(rgba(80,58,41,.18) 1px,transparent 1px);background-size:22px 22px;z-index:-1}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(247,240,229,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .logo{display:flex;align-items:center;gap:12px;min-width:190px}
+    .logo img{width:220px;height:auto}
+    .links{display:flex;align-items:center;gap:8px}
+    .links a{padding:12px 14px;border-radius:999px;color:var(--muted);font-weight:700;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+    .links a:hover{background:var(--sand);color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 20px;background:var(--ink);color:var(--white);font-weight:800;box-shadow:0 14px 40px rgba(45,41,36,.18);cursor:pointer;min-height:48px;text-align:center}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+    .menu{display:none;background:var(--ink);color:var(--white);border:0;border-radius:999px;padding:12px 15px;font-weight:800;min-height:46px;min-width:46px}
+    .mobile{display:none;border-top:1px solid var(--line);padding:12px 0 18px}.mobile a{display:flex;align-items:center;min-height:48px;padding:14px 0;font-weight:800;color:var(--muted)}
+    .hero{padding:86px 0 68px;position:relative}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--sage-deep);font-weight:800;background:rgba(255,250,242,.65)}
+    h1,h2,h3{margin:0;font-family:inherit;letter-spacing:-.055em}h1{font-size:clamp(48px,8vw,112px);line-height:.92;max-width:780px}h2{font-size:clamp(34px,5vw,70px);line-height:1}h3{font-size:28px;line-height:1.1}.lead{font-size:clamp(18px,2vw,24px);line-height:1.55;color:var(--muted);max-width:680px;margin:24px 0 0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .hero-card{position:relative}.photo{border-radius:42px;overflow:hidden;box-shadow:var(--shadow);border:10px solid var(--white);background:var(--sand)}.photo img{width:100%;height:590px;object-fit:cover}.stamp{position:absolute;left:-24px;bottom:32px;background:var(--white);border:1px solid var(--line);border-radius:26px;padding:20px;box-shadow:var(--shadow);max-width:260px}.stamp strong{display:block;font-size:34px;color:var(--clay-dark)}.stamp span{color:var(--muted);font-weight:700;line-height:1.45}.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--sage);color:var(--white)}.track{display:flex;width:max-content;animation:roll 32s linear infinite}.track span{font-weight:900;text-transform:uppercase;letter-spacing:.12em;padding:18px 24px;white-space:nowrap}@keyframes roll{to{transform:translateX(-50%)}}
+    section{padding:92px 0}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}.kicker{color:var(--clay-dark);font-weight:900;text-transform:uppercase;letter-spacing:.16em;font-size:13px;margin-bottom:14px}.copy{font-size:18px;line-height:1.75;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(255,250,242,.72);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 18px 60px rgba(70,45,32,.08)}.card .num{width:44px;height:44px;border-radius:16px;background:var(--sand);display:grid;place-items:center;font-weight:900;color:var(--clay-dark);margin-bottom:22px}.card p{color:var(--muted);line-height:1.65;margin-bottom:0}.offer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.offer{padding:0;overflow:hidden}.offer img{height:280px;width:100%;object-fit:cover}.offer div{padding:28px}.badge{display:inline-flex;background:#efe3cf;color:var(--clay-dark);border-radius:999px;padding:8px 12px;font-weight:900;font-size:13px;margin-bottom:14px}.events{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.pill{border:1px solid var(--line);background:rgba(255,250,242,.72);border-radius:999px;padding:12px 16px;font-weight:800;color:var(--sage-deep)}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.faq{display:grid;gap:12px}.faq details{background:rgba(255,250,242,.78);border:1px solid var(--line);border-radius:22px;padding:20px}.faq summary{cursor:pointer;font-weight:900;font-size:18px}.faq p{color:var(--muted);line-height:1.65;margin-bottom:0}.booking{background:linear-gradient(135deg,var(--sage),#a6a18e);border-radius:46px;padding:44px;color:var(--white);box-shadow:var(--shadow);overflow:hidden;position:relative}.booking:after{content:"";position:absolute;right:-120px;top:-140px;width:360px;height:360px;border-radius:50%;background:rgba(255,250,242,.16)}.booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;position:relative;z-index:1}.booking h2,.booking .kicker{color:var(--white)}.booking p{color:rgba(255,250,242,.86)}form{display:grid;gap:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:7px;font-weight:900;color:var(--white)}input,textarea,select{width:100%;border:1px solid rgba(255,250,242,.36);background:rgba(255,250,242,.92);color:var(--ink);border-radius:16px;padding:15px 15px;outline:none;min-height:48px;font-size:16px}textarea{min-height:130px;resize:vertical}.success,.error{font-weight:900;min-height:22px}.success{color:#fff}.error{color:#ffe1d8}.contact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact-item{background:var(--ink);color:var(--white);border-radius:28px;padding:24px}.contact-item span{display:block;color:rgba(255,250,242,.68);font-weight:800;margin-bottom:8px}footer{padding:54px 0;border-top:1px solid var(--line);color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot img{width:240px}.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+    @media (max-width:900px){.links,.nav>.btn{display:none}.menu{display:block}.mobile.open{display:block}.hero{padding-top:54px}.hero-grid,.split,.booking-grid{grid-template-columns:1fr}.photo img{height:430px}.stamp{left:18px;bottom:18px}.cards,.process,.contact-strip{grid-template-columns:1fr 1fr}.offer-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.booking{border-radius:38px}.foot{align-items:flex-start}}
+    @media (max-width:560px){.wrap{width:min(100% - 24px,1180px)}.nav{height:72px}.logo{min-width:0}.logo img{width:min(178px,58vw)}h1{font-size:clamp(42px,15vw,58px);line-height:.95}h2{font-size:clamp(32px,11vw,46px)}h3{font-size:24px}.lead{font-size:17px}.hero-actions .btn{width:100%}.cards,.process,.contact-strip{grid-template-columns:1fr}.card{padding:22px;border-radius:22px}.booking{padding:24px 18px;border-radius:28px;margin-inline:-2px}.photo{border-width:7px;border-radius:28px}.photo img{height:330px}.stamp{position:static;margin-top:14px;max-width:none}.track span{padding:15px 18px;font-size:13px}section{padding:62px 0}.offer img{height:220px}.contact-item{border-radius:22px}.foot{flex-direction:column}.foot img{width:210px}}@media (max-width:380px){.wrap{width:min(100% - 18px,1180px)}.logo img{width:150px}.menu{padding:10px 12px}.photo img{height:280px}.booking{padding:22px 14px}.btn{padding-inline:16px}.card{padding:20px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top" aria-label="The Clay Caravan home"><img src="https://images.squarespace-cdn.com/content/v1/68a92c702800b50049eb8d35/868b7b9e-a53e-403e-8e06-f86a29ae158b/TheClayCaravanLogos_NameSage.png" alt="The Clay Caravan"></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#classes">Classes</a><a href="#events">Events</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#book">Book now</a>
+      <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+    </div>
+    <nav class="wrap mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#about">About</a><a href="#classes">Classes</a><a href="#events">Events</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a><a href="#book">Book now</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Ceramics events</div>
+          <h1>Ceramics @ your place.</h1>
+          <p class="lead">The Clay Caravan brings clay, tools, and friendly guidance to your home, patio, workplace, restaurant, or event space.</p>
+          <div class="hero-actions"><a class="btn" href="#book">Book your event</a><a class="btn secondary" href="#classes">See what we do</a></div>
+        </div>
+        <div class="hero-card">
+          <div class="photo"><img src="https://images.squarespace-cdn.com/content/v1/68a92c702800b50049eb8d35/fbf669de-00a9-4ad6-a17e-d36d50831597/pexels-cottonbro-6694752.jpg" alt="People hand building pottery together"></div>
+          <div class="stamp"><strong>6 to 20</strong><span>guests, your place, our tools, simple setup.</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="marquee"><div class="track"><span>Workshop</span><span>Birthday</span><span>Corporate Mixer</span><span>Bachelorette</span><span>Festival</span><span>Dinner</span><span>Baby Shower</span><span>Graduation</span><span>Pop Up</span><span>Team Building</span><span>Workshop</span><span>Birthday</span><span>Corporate Mixer</span><span>Bachelorette</span><span>Festival</span><span>Dinner</span><span>Baby Shower</span><span>Graduation</span><span>Pop Up</span><span>Team Building</span></div></div>
+    <section class="wrap reveal" id="about">
+      <div class="split">
+        <div><div class="kicker">Who we are</div><h2>Clay should feel easy to start.</h2></div>
+        <div class="copy"><p>The Clay Caravan makes ceramics feel relaxed and easy to join in. We bring the studio setup to familiar places, then guide the group through the making part.</p><p>No stiff studio mood. No pressure to be good already. Just clay, time, and something you made yourself.</p></div>
+      </div>
+    </section>
+    <section class="wrap reveal">
+      <div class="cards">
+        <article class="card"><div class="num">01</div><h3>Send the details</h3><p>Share the date, guest count, location, and what kind of event you have in mind.</p></article>
+        <article class="card"><div class="num">02</div><h3>We bring the setup</h3><p>Clay, tools, equipment, setup help, cleanup help, and clear instruction come with us.</p></article>
+        <article class="card"><div class="num">03</div><h3>Everyone makes</h3><p>Guests get a hands-on clay session that works for first-timers and people who have made before.</p></article>
+      </div>
+    </section>
+    <section class="wrap reveal" id="classes">
+      <div class="split" style="align-items:end"><div><div class="kicker">What we do</div><h2>Pick the clay session.</h2></div><p class="copy">Hand-building is ready to book now. Wheel-throwing is listed as coming soon.</p></div>
+      <div class="offer-grid" style="margin-top:30px">
+        <article class="card offer"><img src="https://images.squarespace-cdn.com/content/v1/68a92c702800b50049eb8d35/fbf669de-00a9-4ad6-a17e-d36d50831597/pexels-cottonbro-6694752.jpg" alt="Hand building clay class"><div><span class="badge">Available now</span><h3>Hand-Building classes</h3><p>A hands-on ceramics class brought to your place. Guests shape, build, and learn in a relaxed setting. No studio required.</p></div></article>
+        <article class="card offer"><img src="https://images.squarespace-cdn.com/content/v1/68a92c702800b50049eb8d35/dbc6a11e-fc3c-4e03-bdec-8be0a9cf10e7/Untitled%2Bdesign%2B%282%29.png" alt="Wheel throwing class"><div><span class="badge">Coming soon</span><h3>Wheel-Throwing Classes</h3><p>A guided wheel session for groups that want to try the pottery wheel.</p></div></article>
+      </div>
+    </section>
+    <section class="wrap reveal" id="events">
+      <div class="split"><div><div class="kicker">Perfect for</div><h2>Ceramics for your kind of event.</h2></div><div><p class="copy">The setup works for birthdays, dinners, team events, showers, pop-ups, and community spaces. You provide the space. We bring the clay.</p><div class="events"><span class="pill">Birthdays</span><span class="pill">Bachelorette parties</span><span class="pill">Corporate mixers</span><span class="pill">Team building</span><span class="pill">Restaurants</span><span class="pill">Patios</span><span class="pill">Markets</span><span class="pill">Community events</span><span class="pill">Family gatherings</span><span class="pill">Private parties</span></div></div></div>
+    </section>
+    <section class="wrap reveal">
+      <div class="process">
+        <article class="card"><h3>Where it works</h3><p>Anywhere with enough space for guests, tables, and chairs.</p></article>
+        <article class="card"><h3>Experience</h3><p>Good for complete beginners and guests who have used clay before.</p></article>
+        <article class="card"><h3>Group size</h3><p>Best for six to twenty guests.</p></article>
+        <article class="card"><h3>The mood</h3><p>Calm, creative, and easy to follow.</p></article>
+      </div>
+    </section>
+    <section class="wrap reveal" id="faqs">
+      <div class="split"><div><div class="kicker">FAQs</div><h2>A few things people ask.</h2></div><div class="faq"><details open><summary>What does The Clay Caravan do?</summary><p>We host ceramic arts events at your location using our equipment.</p></details><details><summary>Who is it for?</summary><p>Anyone. The sessions are made for different skill levels and needs.</p></details><details><summary>Where can you host?</summary><p>Anywhere with enough space for six to twenty guests, plus tables and chairs.</p></details><details><summary>How do I book?</summary><p>Use the form below, call, or email. The Clay Caravan will follow up with next steps.</p></details></div></div>
+    </section>
+    <section class="wrap reveal" id="book">
+      <div class="booking">
+        <div class="booking-grid">
+          <div><div class="kicker">Book your experience</div><h2>Tell us about your event.</h2><p class="copy">Send the basics and The Clay Caravan will get back to you with more information.</p></div>
+          <div>
+            <div class="success" data-success></div><div class="error" data-error></div>
+            <form id="bookingForm" action="https://formspree.io/f/xpqeblbz" method="POST">
+              <div class="row"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div>
+              <div class="row"><label>Phone<input name="phone" autocomplete="tel"></label><label>Event type<select name="event_type" required><option value="">Choose one</option><option>Birthday</option><option>Bachelorette</option><option>Corporate event</option><option>Community event</option><option>Private party</option><option>Other</option></select></label></div>
+              <div class="row"><label>Guest count<input name="guest_count" placeholder="Example: 12"></label><label>Preferred date<input type="date" name="preferred_date"></label></div>
+              <label>Location or venue<input name="location" placeholder="Home, patio, restaurant, office, civic center"></label>
+              <label>Message<textarea name="message" required placeholder="Tell us what you want the event to feel like."></textarea></label>
+              <input type="hidden" name="_subject" value="New Clay Caravan booking request">
+              <button class="btn" type="submit">Send booking request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap reveal" id="contact">
+      <div class="contact-strip">
+        <a class="contact-item" href="mailto:hello@theclaycaravan.com"><span>Email</span>hello@theclaycaravan.com</a>
+        <a class="contact-item" href="tel:+16232521330"><span>Phone</span>623.252.1330</a>
+        <a class="contact-item" href="#book"><span>Bookings</span>Start with the form</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><img src="https://images.squarespace-cdn.com/content/v1/68a92c702800b50049eb8d35/868b7b9e-a53e-403e-8e06-f86a29ae158b/TheClayCaravanLogos_NameSage.png" alt="The Clay Caravan"><div>© <span id="year"></span> The Clay Caravan. Ceramics @ your place.</div></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');menuBtn.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));const form=document.getElementById('bookingForm'),success=document.querySelector('[data-success]'),error=document.querySelector('[data-error]');form.addEventListener('submit',async e=>{e.preventDefault();success.textContent='';error.textContent='';const button=form.querySelector('button');button.disabled=true;button.textContent='Sending...';try{const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(res.ok){success.textContent='Thank you. Your request has been sent.';form.reset()}else{error.textContent='Something went wrong. Please email hello@theclaycaravan.com.'}}catch(err){error.textContent='Something went wrong. Please email hello@theclaycaravan.com.'}button.disabled=false;button.textContent='Send booking request'});
+  </script>
+</body>
+</html>

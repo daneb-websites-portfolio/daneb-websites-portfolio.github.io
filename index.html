@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dane Bellamy builds clean, mobile-friendly websites for small businesses.">
+  <title>Dane Bellamy | Websites for Small Businesses</title>
+  <style>
+    :root{
+      --orange:#f47b20;
+      --orange-dark:#c9560d;
+      --orange-soft:#fff0e5;
+      --cream:#fffaf3;
+      --white:#ffffff;
+      --ink:#17120d;
+      --muted:#6c5d50;
+      --line:rgba(23,18,13,.14);
+      --card:#fffdf9;
+      --shadow:0 20px 60px rgba(92,47,10,.13);
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--cream),#fff);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(244,123,32,.12) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,250,243,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:-.05em;font-size:24px}.brand span{color:var(--orange)}
+    .links{display:flex;align-items:center;gap:8px}.links a{padding:11px 13px;border-radius:999px;color:var(--muted);font-weight:800;font-size:14px}.links a:hover{background:var(--orange-soft);color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);background:var(--ink);color:var(--white);border-radius:999px;padding:14px 20px;font-weight:900;box-shadow:5px 5px 0 var(--orange);transition:transform .18s ease,box-shadow .18s ease;cursor:pointer;text-align:center}
+    .btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--orange)}
+    .btn.alt{background:var(--white);color:var(--ink)}
+    .menu{display:none;border:2px solid var(--ink);background:var(--white);border-radius:999px;padding:10px 14px;font-weight:900}
+    .mobile{display:none;border-top:1px solid var(--line);padding:10px 0 16px}.mobile a{display:block;padding:14px 0;font-weight:900;color:var(--muted)}.mobile.open{display:block}
+    .hero{padding:82px 0 56px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}.tag{display:inline-flex;border:2px solid var(--ink);background:var(--white);border-radius:999px;padding:9px 13px;font-weight:900;box-shadow:4px 4px 0 var(--orange);margin-bottom:20px}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(46px,8vw,96px);line-height:.92;letter-spacing:-.075em;margin-bottom:22px}h2{font-size:clamp(34px,5vw,62px);line-height:.98;letter-spacing:-.06em;margin-bottom:16px}h3{font-size:25px;letter-spacing:-.04em}.lead{font-size:clamp(18px,2.2vw,24px);line-height:1.5;color:var(--muted);max-width:700px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-card{background:var(--card);border:2px solid var(--ink);border-radius:36px;padding:24px;box-shadow:10px 10px 0 var(--orange);transform:rotate(1deg);animation:floatIn .7s ease both}.hero-card .screen{border:2px solid var(--ink);border-radius:24px;overflow:hidden;background:var(--white)}.screen-top{display:flex;gap:6px;padding:12px;border-bottom:2px solid var(--ink);background:var(--orange-soft)}.dot{width:12px;height:12px;border:2px solid var(--ink);border-radius:50%;background:var(--orange)}.mock{padding:22px}.mock-line{height:14px;background:var(--ink);border-radius:999px;margin-bottom:12px}.mock-line.orange{background:var(--orange);width:65%}.mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.mock-box{height:80px;border:2px solid var(--ink);border-radius:16px;background:var(--orange-soft)}
+    section{padding:74px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.section-head p{max-width:470px;color:var(--muted);line-height:1.6;margin-bottom:0}.grid{display:grid;gap:18px}.services{grid-template-columns:repeat(3,1fr)}.card{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:24px;box-shadow:6px 6px 0 rgba(244,123,32,.8);transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 rgba(244,123,32,.8)}.card p{color:var(--muted);line-height:1.6;margin-bottom:0}.tiny{font-weight:900;color:var(--orange-dark);text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin-bottom:10px}
+    .work{grid-template-columns:repeat(3,1fr)}.project{display:block;position:relative;min-height:260px}.project:after{content:"Click to view";position:absolute;right:18px;bottom:18px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900}.project .type{display:inline-flex;margin-bottom:28px;background:var(--orange-soft);border:2px solid var(--ink);border-radius:999px;padding:7px 10px;font-weight:900;font-size:12px}.project h3{margin-bottom:10px}.project:hover .arrow{transform:translateX(4px)}.arrow{display:inline-block;transition:.18s ease}
+    .pricing{grid-template-columns:repeat(3,1fr)}.price{position:relative}.amount{font-size:42px;font-weight:900;letter-spacing:-.06em;margin:8px 0}.price ul{padding-left:20px;color:var(--muted);line-height:1.8}.popular{position:absolute;top:-15px;right:20px;background:var(--orange);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:7px 11px;font-weight:900;font-size:12px;box-shadow:4px 4px 0 var(--ink)}
+    .process{grid-template-columns:repeat(4,1fr)}.num{width:42px;height:42px;border:2px solid var(--ink);border-radius:14px;background:var(--orange);display:grid;place-items:center;font-weight:900;margin-bottom:16px}
+    .contact{background:var(--ink);color:var(--white);border-radius:38px;padding:34px;box-shadow:10px 10px 0 var(--orange)}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}.contact p{color:rgba(255,255,255,.74);line-height:1.65}.form{display:grid;gap:12px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:grid;gap:7px;font-weight:900}input,textarea,select{width:100%;border:2px solid rgba(255,255,255,.35);background:#fff;color:var(--ink);border-radius:16px;padding:14px;font:inherit}textarea{min-height:130px;resize:vertical}.contact .btn{background:var(--orange);color:var(--ink);box-shadow:5px 5px 0 #fff}.msg{min-height:22px;font-weight:900}.success{color:#fff}.error{color:#ffd3bd}
+    footer{padding:42px 0;color:var(--muted);border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}.reveal.show{opacity:1;transform:none}@keyframes floatIn{from{opacity:0;transform:translateY(18px) rotate(1deg)}to{opacity:1;transform:translateY(0) rotate(1deg)}}
+    @media(max-width:900px){.links,.nav>.btn{display:none}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.services,.pricing,.work{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.hero-card{transform:none}.section-head{display:block}}
+    @media(max-width:600px){.wrap{width:min(100% - 22px,1120px)}.nav{height:68px}.brand{font-size:21px}.hero{padding:52px 0 34px}h1{font-size:clamp(42px,14vw,60px)}.hero-actions .btn{width:100%}.services,.pricing,.work,.process{grid-template-columns:1fr}.row{grid-template-columns:1fr}.contact{padding:24px 18px;border-radius:28px}.card{border-radius:22px}.project{min-height:auto;padding-bottom:64px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.hero-card{animation:none;opacity:1;transform:none;transition:none}.btn:hover,.card:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top">Dane<span>Web</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#work">Client websites</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Get a quote</a>
+      <button class="menu" id="menuBtn" aria-expanded="false">Menu</button>
+    </div>
+    <nav class="wrap mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#work">Client websites</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div class="reveal">
+          <div class="tag">Websites for small businesses</div>
+          <h1>Clean sites that make your business look legit.</h1>
+          <p class="lead">I build fast, mobile-friendly websites for local businesses that need a better online presence without dealing with a massive agency.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">View client websites</a>
+            <a class="btn alt" href="#pricing">See pricing</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="screen">
+            <div class="screen-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="mock">
+              <div class="mock-line"></div>
+              <div class="mock-line orange"></div>
+              <div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap reveal">
+      <div class="section-head">
+        <div><div class="tiny">What I make</div><h2>Websites that do the job.</h2></div>
+        <p>Simple landing pages, full business sites, booking forms, product pages, and e-commerce setups.</p>
+      </div>
+      <div class="grid services">
+        <article class="card"><h3>Business websites</h3><p>For shops, trades, local services, restaurants, and small brands that need a proper online home.</p></article>
+        <article class="card"><h3>Booking and contact forms</h3><p>Forms that send enquiries straight to your inbox, using clean setup through Formspree.</p></article>
+        <article class="card"><h3>E-commerce planning</h3><p>Product pages, checkout planning, and store layouts for businesses that want to sell online.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap reveal" id="work">
+      <div class="section-head">
+        <div><div class="tiny">Client websites</div><h2>Recent client work.</h2></div>
+        <p>These boxes are clickable. Open them to view the client websites in this project folder.</p>
+      </div>
+      <div class="grid work">
+        <a class="card project" href="client-websites/clay-caravan.html" target="_blank" rel="noopener"><span class="type">Ceramics events</span><h3>The Clay Caravan</h3><p>A warm mobile-friendly website for a ceramics workshop business with booking flow and event details.</p><p><span class="arrow">Open website →</span></p></a>
+        <a class="card project" href="client-websites/1_lumen_and_leaf_studio.html" target="_blank" rel="noopener"><span class="type">Design studio</span><h3>Lumen & Leaf Studio</h3><p>A clean service website built around visual branding, simple sections, and clear enquiry flow.</p><p><span class="arrow">Open website →</span></p></a>
+        <a class="card project" href="client-websites/2_northline_cyber_assurance.html" target="_blank" rel="noopener"><span class="type">Cyber service</span><h3>Northline Cyber Assurance</h3><p>A sharper business site for a technical service with strong trust signals and structured content.</p><p><span class="arrow">Open website →</span></p></a>
+        <a class="card project" href="client-websites/3_copper_harbor_patisserie.html" target="_blank" rel="noopener"><span class="type">Bakery</span><h3>Copper Harbor Patisserie</h3><p>A food business site with product-style presentation, local feel, and customer-friendly layout.</p><p><span class="arrow">Open website →</span></p></a>
+        <a class="card project" href="client-websites/4_orbit_shift_auto_detailing.html" target="_blank" rel="noopener"><span class="type">Auto detailing</span><h3>Orbit Shift Auto Detailing</h3><p>A service website built to show packages, results, and easy contact options for customers.</p><p><span class="arrow">Open website →</span></p></a>
+        <a class="card project" href="client-websites/5_elm_and_ember_architecture.html" target="_blank" rel="noopener"><span class="type">Architecture</span><h3>Elm & Ember Architecture</h3><p>A premium-feeling portfolio site with clean spacing, project-led layout, and strong presentation.</p><p><span class="arrow">Open website →</span></p></a>
+      </div>
+    </section>
+
+    <section class="wrap reveal" id="pricing">
+      <div class="section-head">
+        <div><div class="tiny">Pricing</div><h2>Simple starting prices.</h2></div>
+        <p>Final price depends on pages, features, and how much content is already ready.</p>
+      </div>
+      <div class="grid pricing">
+        <article class="card price"><div class="tiny">Starter</div><h3>Landing page</h3><div class="amount">£80+</div><p>Best for a basic online presence.</p><ul><li>One page</li><li>Mobile design</li><li>Contact button</li><li>Basic SEO setup</li></ul></article>
+        <article class="card price"><span class="popular">Most useful</span><div class="tiny">Business</div><h3>Full business site</h3><div class="amount">£180+</div><p>Best for most local businesses.</p><ul><li>Multiple sections or pages</li><li>Contact form</li><li>Service layout</li><li>Polished design</li></ul></article>
+        <article class="card price"><div class="tiny">Advanced</div><h3>Shop or booking setup</h3><div class="amount">£300+</div><p>Best for businesses that need more features.</p><ul><li>Product or booking layout</li><li>Formspree form setup</li><li>More custom sections</li><li>Launch support</li></ul></article>
+      </div>
+    </section>
+
+    <section class="wrap reveal" id="process">
+      <div class="section-head">
+        <div><div class="tiny">How it works</div><h2>Easy process.</h2></div>
+      </div>
+      <div class="grid process">
+        <article class="card"><div class="num">1</div><h3>Talk</h3><p>You tell me what the business needs and what pages matter.</p></article>
+        <article class="card"><div class="num">2</div><h3>Build</h3><p>I make the site, layout the content, and set up the contact form.</p></article>
+        <article class="card"><div class="num">3</div><h3>Review</h3><p>You check it and I make sensible changes before launch.</p></article>
+        <article class="card"><div class="num">4</div><h3>Launch</h3><p>I help get it ready to send to customers or connect to hosting.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap reveal" id="contact">
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <div class="tiny">Contact</div>
+            <h2>Want a website?</h2>
+            <p>Send the basics and I’ll reply with what I think would work, what it could cost, and what the next step is.</p>
+          </div>
+          <div>
+            <div class="msg success" data-success></div>
+            <div class="msg error" data-error></div>
+            <form class="form" id="contactForm" action="https://formspree.io/f/xbdevovq" method="POST">
+              <div class="row">
+                <label>Name<input name="name" autocomplete="name" required></label>
+                <label>Email<input type="email" name="email" autocomplete="email" required></label>
+              </div>
+              <div class="row">
+                <label>Business name<input name="business_name" autocomplete="organization"></label>
+                <label>Website needed<select name="project_type"><option>Business website</option><option>Landing page</option><option>E-commerce</option><option>Booking/contact site</option><option>Not sure yet</option></select></label>
+              </div>
+              <label>Message<textarea name="message" required placeholder="Tell me what kind of website you need."></textarea></label>
+              <input type="hidden" name="_subject" value="New website enquiry from portfolio">
+              <button class="btn" type="submit">Send enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot"><strong>DaneWeb</strong><span>Websites for small businesses.</span></div>
+  </footer>
+
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const mobileNav=document.getElementById('mobileNav');
+    menuBtn.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
+    mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const form=document.getElementById('contactForm');
+    const success=document.querySelector('[data-success]');
+    const error=document.querySelector('[data-error]');
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();success.textContent='';error.textContent='';
+      const button=form.querySelector('button');const old=button.textContent;button.disabled=true;button.textContent='Sending...';
+      try{
+        const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+        if(res.ok){success.textContent='Sent. I’ll get back to you soon.';form.reset()}else{error.textContent='Something went wrong. Please email me directly.'}
+      }catch(err){error.textContent='Something went wrong. Please email me directly.'}
+      button.disabled=false;button.textContent=old;
+    });
+  </script>
+</body>
+</html>
